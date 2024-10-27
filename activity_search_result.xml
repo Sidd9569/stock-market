@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"> <!-- Removed padding to maximize image size -->
+
+    <!-- Nifty Chart Image -->
+    <ImageView
+        android:id="@+id/niftyChartImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:contentDescription="@string/nifty_chart"
+        android:scaleType="centerCrop" /> <!-- Adjusted scale type -->
+
+    <!-- Bank Nifty Chart Image -->
+    <ImageView
+        android:id="@+id/bankNiftyChartImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:contentDescription="@string/bank_nifty_chart"
+        android:scaleType="centerCrop" /> <!-- Adjusted scale type -->
+
+    <!-- BSE Chart Image -->
+    <ImageView
+        android:id="@+id/bseChartImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:contentDescription="@string/bse_chart"
+        android:scaleType="centerCrop" /> <!-- Adjusted scale type -->
+
+    <!-- Stock Name TextView -->
+    <TextView
+        android:id="@+id/stockNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="1dp" />
+
+    <!-- Stock Value TextView -->
+    <TextView
+        android:id="@+id/stockValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Quantity EditText -->
+    <EditText
+        android:id="@+id/quantityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Quantity"
+        android:inputType="number" />
+
+    <!-- Stop Loss EditText -->
+    <EditText
+        android:id="@+id/stopLossEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Stop Loss"
+        android:inputType="numberDecimal" />
+
+    <!-- Search Result ListView -->
+    <ListView
+        android:id="@+id/searchResultListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
+
+

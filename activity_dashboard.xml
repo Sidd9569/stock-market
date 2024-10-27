@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Stock Market App"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/accountMoneyTextView"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Balance: $0.00"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_below="@id/accountMoneyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for stocks..."
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Portfolio Heading -->
+    <TextView
+        android:id="@+id/portfolioHeading"
+        android:layout_below="@id/searchBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Portfolio"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ListView
+        android:id="@+id/portfolioListView"
+        android:layout_below="@id/portfolioHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false" />
+
+    <!-- Market Alerts Heading -->
+    <TextView
+        android:id="@+id/marketAlertsHeading"
+        android:layout_below="@id/portfolioListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market Alerts"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ListView
+        android:id="@+id/watchlistListView"
+        android:layout_below="@id/marketAlertsHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_below="@id/watchlistListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_marginTop="16dp" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/logoutButton"
+        android:layout_marginTop="16dp"
+        android:flipInterval="3000"
+        android:autoStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_2"
+            android:contentDescription="Flipping Image 1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_3"
+            android:contentDescription="Flipping Image 2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_4"
+            android:contentDescription="Flipping Image 3" />
+    </ViewFlipper>
+
+</RelativeLayout>
+
+
